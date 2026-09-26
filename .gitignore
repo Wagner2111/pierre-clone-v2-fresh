@@ -1,0 +1,12 @@
+﻿node_modules/
+.next/
+.env.local
+.env.*.local
+dist/
+build/
+*.db
+.DS_Store
+.env
+.env.production.local
+pierre.db
+backend/pierre.db
