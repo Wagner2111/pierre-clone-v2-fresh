@@ -61,7 +61,7 @@ export async function GET() {
           const accData = await accRes.json()
           const accounts = Array.isArray(accData.results) ? accData.results : (Array.isArray(accData.accounts) ? accData.accounts : [])
 
-          accounts.forEach((acc) => {
+          accounts.forEach((acc: any) => {
             allAccounts.push({
               name: conn.institution?.name || conn.name || 'Conta conectada',
               institution: conn.institution?.name,
