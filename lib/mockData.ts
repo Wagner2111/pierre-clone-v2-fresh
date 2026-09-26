@@ -43,6 +43,7 @@ export const mockCardInvoices = [
 ]
 
 export const mockTransactions = [
+  
   {
     id: 1,
     icon: '💰',
@@ -217,4 +218,4 @@ export const mockTopCategories = [
   { name: 'Alimentação', value: 234.50, percentage: 21.5 },
   { name: 'Saúde', value: 156.00, percentage: 14.3 },
   { name: 'Transporte', value: 87.30, percentage: 8.0 },
-]
+] as const

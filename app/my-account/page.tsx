@@ -1,4 +1,6 @@
-'use client'
+﻿'use client'
+
+export const dynamic = 'force-dynamic'
 
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -47,7 +49,7 @@ export default function MyAccountPage() {
             localStorage.setItem('pierre_accounts', JSON.stringify(allAccounts))
             setAccounts(allAccounts)
 
-            // Limpa o arquivo de webhook após carregar
+            // Limpa o arquivo de webhook apÃ³s carregar
             await fetch('/api/pluggy/stored', { method: 'DELETE' })
           }
         }
@@ -73,7 +75,7 @@ export default function MyAccountPage() {
   }, [searchParams])
 
   const removeAccount = (index: number, accountName: string) => {
-    const confirmRemove = window.confirm(`Tem certeza que deseja remover "${accountName}" permanentemente? Esta ação não pode ser desfeita.`)
+    const confirmRemove = window.confirm(`Tem certeza que deseja remover "${accountName}" permanentemente? Esta aÃ§Ã£o nÃ£o pode ser desfeita.`)
     if (confirmRemove) {
       setAccounts(prev => prev.filter((_, idx) => idx !== index))
     }
@@ -90,37 +92,37 @@ export default function MyAccountPage() {
           const unique = Array.from(new Map(allAccounts.map((a: any) => [a.name, a])).values())
           localStorage.setItem('pierre_accounts', JSON.stringify(unique))
           setAccounts(unique)
-          alert(`✅ ${data.accounts.length} conta(s) sincronizada(s) com sucesso!`)
+          alert(`âœ… ${data.accounts.length} conta(s) sincronizada(s) com sucesso!`)
         } else {
-          alert('❌ Nenhuma conta encontrada no Pluggy')
+          alert('âŒ Nenhuma conta encontrada no Pluggy')
         }
       }
     } catch (e) {
       console.error('Erro ao sincronizar:', e)
-      alert('❌ Erro ao sincronizar com Pluggy')
+      alert('âŒ Erro ao sincronizar com Pluggy')
     }
   }
 
   return (
     <main className="min-h-screen bg-[#09090b] text-white pl-14">
       <div className="max-w-3xl mx-auto px-6 py-10">
-        <button onClick={() => router.push('/dashboard')} className="text-sm text-zinc-400 hover:text-white mb-8">← Voltar ao dashboard</button>
+        <button onClick={() => router.push('/dashboard')} className="text-sm text-zinc-400 hover:text-white mb-8">â† Voltar ao dashboard</button>
         <h1 className="text-3xl font-semibold mb-2">Minha conta</h1>
-        <p className="text-zinc-400 mb-8">{user.name || 'Usuário'} · Gerencie seu perfil e suas contas conectadas</p>
+        <p className="text-zinc-400 mb-8">{user.name || 'UsuÃ¡rio'} Â· Gerencie seu perfil e suas contas conectadas</p>
 
         <section className="rounded-2xl border border-zinc-800 bg-[#101012] p-6 mb-6">
-          <h2 className="text-lg font-medium mb-4">Informações pessoais</h2>
+          <h2 className="text-lg font-medium mb-4">InformaÃ§Ãµes pessoais</h2>
           <div className="grid gap-3 sm:grid-cols-2">
             <div><span className="text-xs text-zinc-500">Nome</span><p>{user.name || 'Wagner'}</p></div>
-            <div><span className="text-xs text-zinc-500">E-mail</span><p>{user.email || 'Não informado'}</p></div>
+            <div><span className="text-xs text-zinc-500">E-mail</span><p>{user.email || 'NÃ£o informado'}</p></div>
           </div>
         </section>
 
         <section className="rounded-2xl border border-zinc-800 bg-[#101012] p-6">
           <div className="flex items-center justify-between mb-5">
             <div>
-              <h2 className="text-lg font-medium">Contas bancárias</h2>
-              <p className="text-sm text-zinc-400">Acompanhe seus saldos em um só lugar.</p>
+              <h2 className="text-lg font-medium">Contas bancÃ¡rias</h2>
+              <p className="text-sm text-zinc-400">Acompanhe seus saldos em um sÃ³ lugar.</p>
             </div>
             <div className="flex gap-2">
               <button
@@ -132,7 +134,7 @@ export default function MyAccountPage() {
               <button
                 onClick={() => {
                   const returnUrl = `${typeof window !== 'undefined' ? window.location.origin : ''}/my-account?from=pluggy&t=${Date.now()}`
-                  // Abre Pluggy com instruções de retorno
+                  // Abre Pluggy com instruÃ§Ãµes de retorno
                   const pluggyUrl = `https://meu.pluggy.ai/?return_url=${encodeURIComponent(returnUrl)}`
                   window.open(pluggyUrl, '_blank')
                 }}
@@ -163,7 +165,7 @@ export default function MyAccountPage() {
                 </div>
               ))
             ) : (
-              <p className="text-sm text-zinc-500">Nenhuma conta conectada. Clique em "Adicionar conta" para começar.</p>
+              <p className="text-sm text-zinc-500">Nenhuma conta conectada. Clique em "Adicionar conta" para comeÃ§ar.</p>
             )}
           </div>
         </section>
@@ -171,3 +173,4 @@ export default function MyAccountPage() {
     </main>
   )
 }
+
