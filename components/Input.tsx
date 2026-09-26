@@ -17,6 +17,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     onChange,
     toggleVisibility,
     className,
+    disabled,
   }, ref) => {
     const [showPassword, setShowPassword] = useState(false)
     const isPassword = type === 'password'
@@ -30,11 +31,12 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
           placeholder={placeholder}
           value={value}
           onChange={onChange}
+          disabled={disabled}
           className={`
             w-full px-4 py-3 bg-gray-900 border border-gray-700
             rounded-lg text-white placeholder-gray-500
             focus:outline-none focus:border-gray-500 focus:ring-1 focus:ring-gray-500
-            transition-all ${className || ''}
+            transition-all ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className || ''}
           `}
         />
         {isPassword && toggleVisibility && (
