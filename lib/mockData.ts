@@ -177,30 +177,30 @@ export const mockCategories = [
 ]
 
 export const mockChartData = [
-  { day: 1, thisMont: 0, lastMonth: 100 },
-  { day: 5, thisMont: 150, lastMonth: 200 },
-  { day: 10, thisMont: 200, lastMonth: 300 },
-  { day: 12, thisMont: 350, lastMonth: 400 },
-  { day: 16, thisMont: 350, lastMonth: 450 },
+  { day: "1", thisMont: 0, lastMonth: 100 },
+  { day: "5", thisMont: 150, lastMonth: 200 },
+  { day: "10", thisMont: 200, lastMonth: 300 },
+  { day: "12", thisMont: 350, lastMonth: 400 },
+  { day: "16", thisMont: 350, lastMonth: 450 },
 ]
 
 export const mockHeatmapData = [
-  { day: 1, value: 0 },
-  { day: 2, value: 0 },
-  { day: 3, value: 0 },
-  { day: 4, value: 0 },
-  { day: 5, value: 50 },
-  { day: 6, value: 0 },
-  { day: 7, value: 0 },
-  { day: 8, value: 0 },
-  { day: 9, value: 0 },
-  { day: 10, value: 100 },
-  { day: 11, value: 0 },
-  { day: 12, value: 156.17 },
-  { day: 13, value: 0 },
-  { day: 14, value: 0 },
-  { day: 15, value: 820 },
-  { day: 16, value: 0 },
+  { day: "1", value: 0 },
+  { day: "2", value: 0 },
+  { day: "3", value: 0 },
+  { day: "4", value: 0 },
+  { day: "5", value: 50 },
+  { day: "6", value: 0 },
+  { day: "7", value: 0 },
+  { day: "8", value: 0 },
+  { day: "9", value: 0 },
+  { day: "10", value: 100 },
+  { day: "11", value: 0 },
+  { day: "12", value: 156.17 },
+  { day: "13", value: 0 },
+  { day: "14", value: 0 },
+  { day: "15", value: 820 },
+  { day: "16", value: 0 },
 ]
 
 export const mockSubscriptions = [
