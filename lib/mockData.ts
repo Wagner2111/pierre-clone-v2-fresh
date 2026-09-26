@@ -15,7 +15,7 @@ export const mockAccounts = []
 
 export const mockCards = [
   {
-    id: '1',
+    id: 1,
     name: 'Nubank Platinum',
     lastDigits: '2869',
     limitTotal: 16100,
@@ -24,7 +24,7 @@ export const mockCards = [
     brand: 'Mastercard',
   },
   {
-    id: '2',
+    id: 2,
     name: 'Itaú Black',
     lastDigits: '5421',
     limitTotal: 25000,
@@ -44,7 +44,7 @@ export const mockCardInvoices = [
 
 export const mockTransactions = [
   {
-    id: '1',
+    id: 1,
     icon: '💰',
     description: 'Pagamento recebido',
     category: 'Pagamento de cartão de crédito',
@@ -54,7 +54,7 @@ export const mockTransactions = [
     type: 'income',
   },
   {
-    id: '2',
+    id: 2,
     icon: '💰',
     description: 'Pagamento de fatura',
     category: 'Pagamento de cartão de crédito',
@@ -64,7 +64,7 @@ export const mockTransactions = [
     type: 'expense',
   },
   {
-    id: '3',
+    id: 3,
     icon: '💰',
     description: 'Transferência Recebida | 3D ENGENHARIA LTDA.',
     category: 'Transferências',
@@ -74,7 +74,7 @@ export const mockTransactions = [
     type: 'income',
   },
   {
-    id: '4',
+    id: 4,
     icon: '🏠',
     description: 'Dragao dos Parafusos P 4/12',
     category: 'Utensílios para casa',
@@ -84,7 +84,7 @@ export const mockTransactions = [
     type: 'expense',
   },
   {
-    id: '5',
+    id: 5,
     icon: '🛍️',
     description: 'PG *MEGA LIFE LTDA COM 11/12',
     category: 'Compras',
@@ -96,14 +96,14 @@ export const mockTransactions = [
 ]
 
 export const mockParcelamentos = [
-  { id: '1', icon: '🏠', name: 'Dragao dos Parafusos P', parcels: '4/12', monthly: 156.18, remaining: 1249.36, status: 'ongoing', startDate: '01/09/2026' },
-  { id: '2', icon: '🛍️', name: 'Kvn*Carteira Black', parcels: '4/12', monthly: 30.75, remaining: 246.0, status: 'ongoing', startDate: '05/09/2026' },
-  { id: '3', icon: '🛍️', name: 'Kvn*Aiva Pro', parcels: '4/12', monthly: 50.94, remaining: 407.52, status: 'ongoing', startDate: '10/09/2026' },
-  { id: '4', icon: '🛍️', name: 'Kvn*Aiva', parcels: '4/12', monthly: 24.35, remaining: 194.8, status: 'ongoing', startDate: '12/09/2026' },
-  { id: '5', icon: '🛍️', name: 'Carajas Cons*Api Caraj', parcels: '4/10', monthly: 119.76, remaining: 718.56, status: 'ongoing', startDate: '08/09/2026' },
-  { id: '6', icon: '🎮', name: 'PlayStation 5', parcels: '12/12', monthly: 199.99, remaining: 0, status: 'finished', startDate: '01/08/2025' },
-  { id: '7', icon: '💻', name: 'Monitor LG UltraWide', parcels: '6/6', monthly: 250.0, remaining: 0, status: 'finished', startDate: '01/03/2026' },
-  { id: '8', icon: '📱', name: 'iPhone 14 Pro Max', parcels: '24/24', monthly: 179.99, remaining: 0, status: 'finished', startDate: '01/09/2024' },
+  { id: 1, icon: '🏠', name: 'Dragao dos Parafusos P', parcels: '4/12', monthly: 156.18, remaining: 1249.36, status: 'ongoing', startDate: '01/09/2026' },
+  { id: 2, icon: '🛍️', name: 'Kvn*Carteira Black', parcels: '4/12', monthly: 30.75, remaining: 246.0, status: 'ongoing', startDate: '05/09/2026' },
+  { id: 3, icon: '🛍️', name: 'Kvn*Aiva Pro', parcels: '4/12', monthly: 50.94, remaining: 407.52, status: 'ongoing', startDate: '10/09/2026' },
+  { id: 4, icon: '🛍️', name: 'Kvn*Aiva', parcels: '4/12', monthly: 24.35, remaining: 194.8, status: 'ongoing', startDate: '12/09/2026' },
+  { id: 5, icon: '🛍️', name: 'Carajas Cons*Api Caraj', parcels: '4/10', monthly: 119.76, remaining: 718.56, status: 'ongoing', startDate: '08/09/2026' },
+  { id: 6, icon: '🎮', name: 'PlayStation 5', parcels: '12/12', monthly: 199.99, remaining: 0, status: 'finished', startDate: '01/08/2025' },
+  { id: 7, icon: '💻', name: 'Monitor LG UltraWide', parcels: '6/6', monthly: 250.0, remaining: 0, status: 'finished', startDate: '01/03/2026' },
+  { id: 8, icon: '📱', name: 'iPhone 14 Pro Max', parcels: '24/24', monthly: 179.99, remaining: 0, status: 'finished', startDate: '01/09/2024' },
 ]
 
 export const mockCategories = [
@@ -204,12 +204,12 @@ export const mockHeatmapData = [
 ]
 
 export const mockSubscriptions = [
-  { id: '1', icon: '🎬', name: 'Netflix', value: 54.90, nextBilling: '15/10/2026', category: 'Entretenimento' },
-  { id: '2', icon: '🎵', name: 'Spotify Premium', value: 19.90, nextBilling: '18/10/2026', category: 'Música' },
-  { id: '3', icon: '☁️', name: 'OneDrive 100GB', value: 9.99, nextBilling: '20/10/2026', category: 'Cloud Storage' },
-  { id: '4', icon: '📖', name: 'Kindle Unlimited', value: 14.99, nextBilling: '16/10/2026', category: 'Leitura' },
-  { id: '5', icon: '💪', name: 'Gym Pass', value: 89.90, nextBilling: '01/11/2026', category: 'Saúde' },
-  { id: '6', icon: '🎓', name: 'Udemy Plus', value: 29.99, nextBilling: '25/10/2026', category: 'Educação' },
+  { id: 1, icon: '🎬', name: 'Netflix', value: 54.90, nextBilling: '15/10/2026', category: 'Entretenimento' },
+  { id: 2, icon: '🎵', name: 'Spotify Premium', value: 19.90, nextBilling: '18/10/2026', category: 'Música' },
+  { id: 3, icon: '☁️', name: 'OneDrive 100GB', value: 9.99, nextBilling: '20/10/2026', category: 'Cloud Storage' },
+  { id: 4, icon: '📖', name: 'Kindle Unlimited', value: 14.99, nextBilling: '16/10/2026', category: 'Leitura' },
+  { id: 5, icon: '💪', name: 'Gym Pass', value: 89.90, nextBilling: '01/11/2026', category: 'Saúde' },
+  { id: 6, icon: '🎓', name: 'Udemy Plus', value: 29.99, nextBilling: '25/10/2026', category: 'Educação' },
 ]
 
 export const mockTopCategories = [
