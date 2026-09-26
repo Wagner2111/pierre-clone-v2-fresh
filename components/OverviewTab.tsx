@@ -1,7 +1,7 @@
-﻿'"'"'use client'"'"'
+﻿"use client"
 
-import { SimpleLineChart } from '"'"'./SimpleLineChart'"'"'
-import { Heatmap } from '"'"'./Heatmap'"'"'
+import { SimpleLineChart } from "./SimpleLineChart"
+import { Heatmap } from "./Heatmap"
 
 interface OverviewTabProps {
   stats: {
@@ -109,8 +109,8 @@ export function OverviewTab({
                     <p className="text-xs text-gray-400">{tx.category} • {tx.date}</p>
                   </div>
                 </div>
-                <p className={`font-semibold ${tx.type === '"'"'income'"'"' ? '"'"'text-green-500'"'"' : '"'"'text-red-500'"'"'}`}>
-                  {tx.type === '"'"'income'"'"' ? '"'"'+'"'"' : '"'"''"'"'}R$ {Math.abs(tx.value).toFixed(2)}
+                <p className={`font-semibold ${tx.type === "income" ? "text-green-500" : "text-red-500"}`}>
+                  {tx.type === "income" ? "+" : ""}R$ {Math.abs(tx.value).toFixed(2)}
                 </p>
               </div>
             ))}
