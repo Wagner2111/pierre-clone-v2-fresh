@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+﻿import React, { useState } from 'react'
 
 interface InputProps {
   type?: string
@@ -7,6 +7,7 @@ interface InputProps {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
   toggleVisibility?: boolean
   className?: string
+  disabled?: boolean
 }
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
